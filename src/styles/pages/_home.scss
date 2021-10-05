@@ -1,44 +1,53 @@
 .main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: wrap;
-	.left-part {
+	.left-part,
+	.right-part {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
 		padding-top: 2rem;
-		text-align: center;
+	}
+	.left-part {
 		background-color: $background-1;
-		.profil-pic img {
-			width: 200px;
-			height: 200px;
+		.profil-pic {
+			img {
+				width: 200px;
+				height: 200px;
+			}
 		}
 		.content {
+			hr {
+				margin-bottom: 1rem;
+				margin-top: 1rem;
+			}
 			h1 {
-				padding-top: 1rem;
-				padding-bottom: 1rem;
+				padding: 1rem auto;
 				font-size: 1.15em;
 				letter-spacing: 0.15em;
 				text-transform: uppercase;
+				text-align: center;
 			}
 			.informations {
 				& p {
 					text-align: right;
-					padding-top:0.4rem;
+					padding-top: 0.4rem;
 				}
 				& .label {
 					font-weight: bold;
 					font-size: 0.9em;
 				}
 				& span {
-					font-weight:200;
+					font-weight: 200;
 					font-size: 0.9em;
 				}
 			}
-			.hobbies, .social {
+			.hobbies,
+			.social {
 				ul {
 					text-align: left;
 					li {
 						list-style: none;
-						font-weight:200;
+						font-weight: 200;
 						font-size: 0.9em;
 						a {
 							text-decoration: none;
@@ -52,14 +61,14 @@
 			.contact {
 				& p {
 					text-align: right;
-					padding-top:0.4rem;
+					padding-top: 0.4rem;
 				}
 				& .label {
 					font-weight: bold;
 					font-size: 0.9em;
 				}
 				& span {
-					font-weight:200;
+					font-weight: 200;
 					font-size: 0.9em;
 				}
 			}
@@ -67,11 +76,15 @@
 	}
 
 	.right-part {
-		padding-top: 1rem;
 		background-color: $background-3;
 		.header {
-			padding-top: 1rem;
 			color: $color-1;
+		}
+	}
+
+	@media screen and (min-width: 1224px) {
+		.left-part {
+			float: left;
 		}
 	}
 }
