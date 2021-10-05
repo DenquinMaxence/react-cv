@@ -1,16 +1,77 @@
 .main {
-    display: grid;
-    grid-template-columns: 50% 50%;
-
-    @media screen and(max-width: 700px) {
-        grid-template-columns: 1fr;
-    }
-
-	.informations {
-		background: $color-1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	.left-part {
+		padding-top: 2rem;
+		text-align: center;
+		background-color: $background-1;
+		.profil-pic img {
+			width: 200px;
+			height: 200px;
+		}
+		.content {
+			h1 {
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+				font-size: 1.15em;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+			}
+			.informations {
+				& p {
+					text-align: right;
+					padding-top:0.4rem;
+				}
+				& .label {
+					font-weight: bold;
+					font-size: 0.9em;
+				}
+				& span {
+					font-weight:200;
+					font-size: 0.9em;
+				}
+			}
+			.hobbies, .social {
+				ul {
+					text-align: left;
+					li {
+						list-style: none;
+						font-weight:200;
+						font-size: 0.9em;
+						a {
+							text-decoration: none;
+							color: $color-1;
+							font-weight: bold;
+							font-size: small;
+						}
+					}
+				}
+			}
+			.contact {
+				& p {
+					text-align: right;
+					padding-top:0.4rem;
+				}
+				& .label {
+					font-weight: bold;
+					font-size: 0.9em;
+				}
+				& span {
+					font-weight:200;
+					font-size: 0.9em;
+				}
+			}
+		}
 	}
 
-	.contact {
-		background: $color-2;
+	.right-part {
+		padding-top: 1rem;
+		background-color: $background-3;
+		.header {
+			padding-top: 1rem;
+			color: $color-1;
+		}
 	}
 }
