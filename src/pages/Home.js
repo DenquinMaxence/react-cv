@@ -1,4 +1,4 @@
-import profil from '../img/profil.png';
+import Profil from '../media/profil.png';
 
 const Home = () => {
 	return (
@@ -6,7 +6,7 @@ const Home = () => {
 			<div className='left-part'>
 				<div className='header'></div>
 				<div className='profil-pic'>
-					<img src={profil} alt='profil-pic' />
+					<img src={Profil} alt='profil-pic' />
 				</div>
 				<h1>John Doe</h1>
 				<div className='content'>
