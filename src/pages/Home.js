@@ -30,8 +30,14 @@ const Home = () => {
 					</div>
 				</div>
 				<div className='content'>
+					<hr />
+					<div className="card">
+						<div className="subcard">Experience</div>
+						<div className="subcard">Background</div>
+						<div className="subcard">Interest</div>
+						<div className="subcard">Portfolio</div>
+					</div>
 					<div className='informations'>
-						<hr />
 						<h1>Informations</h1>
 						<p>
 							<span className='label'>Nom & Prénom</span>

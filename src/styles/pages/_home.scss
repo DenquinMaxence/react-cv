@@ -6,11 +6,6 @@
 		align-items: center;
 		flex-flow: column wrap;
 		padding-top: 2rem;
-
-		hr {
-			margin-bottom: 1rem;
-			margin-top: 1rem;
-		}
 	}
 	.left-part {
 		.profil-header {
@@ -56,6 +51,29 @@
 			}
 		}
 		.content {
+			hr {
+				margin-bottom: 1rem;
+				margin-top: 1rem;
+			}
+			.card {
+				display: inline-grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+				background-color: $background-3;
+				border-radius: 15px;
+				width: 325px;
+				height: 325px;
+
+				.subcard {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: $background-theme;
+					color: white;
+					border-radius: 15px;
+					margin: 10px;
+				}
+			}
 			h1 {
 				padding: 1rem;
 				font-size: 1.15em;
