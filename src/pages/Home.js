@@ -1,10 +1,12 @@
+import profil from '../img/profil.png';
+
 const Home = () => {
 	return (
 		<div className='main'>
 			<div className='left-part'>
 				<div className='header'></div>
 				<div className='profil-pic'>
-					<img src='./img/profil.png' alt='profil-pic' />
+					<img src={profil} alt='profil-pic' />
 				</div>
 				<h1>John Doe</h1>
 				<div className='content'>
