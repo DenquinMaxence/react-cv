@@ -8,11 +8,21 @@
 		padding-top: 2rem;
 	}
 	.left-part {
-		background-color: $background-1;
+		.header {
+			background-color: $background-theme;
+			height: 15vh;
+			width: 100%;
+			z-index: -1;
+			position: fixed;
+			top: 0;
+			border-radius: 0px 0px 20px 20px / 20%;
+		}
 		.profil-pic {
 			img {
-				width: 200px;
-				height: 200px;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				border: 7px solid $background-grey;
 			}
 		}
 		.content {
