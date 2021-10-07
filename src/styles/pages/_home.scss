@@ -6,16 +6,22 @@
 		align-items: center;
 		flex-flow: column wrap;
 		padding-top: 2rem;
+
+		hr {
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+		}
 	}
 	.left-part {
-		.header {
+		.profil-header {
 			background-color: $background-theme;
 			height: 15vh;
 			width: 100%;
 			z-index: -1;
-			position: fixed;
+			position: absolute;
 			top: 0;
 			border-radius: 0px 0px 20px 20px / 20%;
+			box-shadow: 0 5px 0 0 rgba(122, 122, 122, 0.1);
 		}
 		.profil-pic {
 			img {
@@ -25,11 +31,31 @@
 				border: 7px solid $background-grey;
 			}
 		}
-		.content {
-			hr {
+		.profil-content {
+			text-align: center;
+			.profil-name {
 				margin-bottom: 1rem;
-				margin-top: 1rem;
 			}
+			.profil-description,
+			.profil-about span {
+				font-weight: 200;
+				font-size: 0.9em;
+				padding-bottom: 5px;
+
+				a {
+					text-decoration: none;
+					color: $color-3;
+				}
+			}
+			.profil-about {
+				margin-top: 1rem;
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		.content {
 			h1 {
 				padding: 1rem;
 				font-size: 1.15em;

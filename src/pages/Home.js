@@ -4,11 +4,31 @@ const Home = () => {
 	return (
 		<div className='main'>
 			<div className='left-part'>
-				<div className='header'></div>
+				<div className='profil-header'></div>
 				<div className='profil-pic'>
 					<img src={Profil} alt='profil-pic' />
 				</div>
-				<h1>John Doe</h1>
+				<div className='profil-content'>
+					<h2 className='profil-name'>Maxence Denquin</h2>
+					<span className='profil-description'>Développeur full-stack</span>
+					<div className='profil-about'>
+						<box-icon name='calendar' flip='horizontal' color='#3991a5' />
+						<span>09 Septembre 2000</span>
+						<box-icon name='phone' type='solid' flip='horizontal' color='#3991a5' />
+						<span>
+							<a href='tel:+06.77.59.83.10'>06.77.59.83.10</a>
+						</span>
+
+						<box-icon name='home' type='solid' flip='horizontal' color='#3991a5' />
+						<span>Outreau, 62230</span>
+						<box-icon name='envelope' color='#3991a5' />
+						<span>
+							<a href='mailto:denquin.maxence.pro@gmail.com'>
+								denquin.maxence.pro@gmail.com
+							</a>
+						</span>
+					</div>
+				</div>
 				<div className='content'>
 					<div className='informations'>
 						<hr />
