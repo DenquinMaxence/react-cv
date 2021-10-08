@@ -6,6 +6,8 @@ $background-1: #dededf;
 $background-2: #3a4258;
 $background-3: #ffffff;
 
+$color-theme: #3991a5;
+$color-grey: #3a4258;
 $background-theme: #3991a5;
 $background-grey: #f0f0f0;
 
@@ -23,5 +25,5 @@ body {
 	font-family: $font-1;
 	line-height: 1.4rem;
 	background: $background-3;
-	color: $color-3;
+	color: $color-grey;
 }

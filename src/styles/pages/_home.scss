@@ -51,7 +51,7 @@ hr {
 
 				a {
 					text-decoration: none;
-					color: $color-3;
+					color: $color-grey;
 				}
 			}
 			.profil-about {
@@ -104,7 +104,7 @@ hr {
 
 	.right-part {
 		.header {
-			color: $color-1;
+			color: $color-theme;
 			text-align: center;
 			hr {
 				margin-right: 30px;
@@ -113,7 +113,9 @@ hr {
 
 			.job-title,
 			.about .about-title,
-			.experiences .experience-title {
+			.experiences .experience-title,
+			.formations .formation-title,
+			.skills .skill-title {
 				text-transform: uppercase;
 				letter-spacing: 2px;
 			}
@@ -123,37 +125,107 @@ hr {
 				text-align: left;
 
 				.about-text {
-					color: $color-3;
+					color: $color-grey;
 					font-weight: 200;
 					font-size: 0.9em;
 				}
 			}
 
-			.experiences {
+			.experiences,
+			.formations {
 				margin: 1rem;
-				.experience-title {
+				.experience-title,
+				.formation-title {
 					margin-bottom: 1rem;
 				}
 				.card {
 					width: 325px;
-					height: 325px;
+					margin-bottom: 1rem;
 					border-radius: 15px;
 					border: 2px solid rgb(221, 221, 221);
 					box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
 
 					.card-body {
 						margin: 2rem;
-						.card-title, .card-subtitle {
-							color: $color-3;
+						.card-title,
+						.card-subtitle {
+							color: $color-grey;
 							text-transform: uppercase;
-						}
-						.card-title {
-							
 						}
 						.card-subtitle {
 							font-weight: 300;
 							font-size: 1em;
 						}
+						.card-infos ul {
+							text-align: left;
+							margin-top: 1rem;
+							list-style: none;
+							li {
+								color: $color-grey;
+							}
+							li:nth-child(2) {
+								margin-top: 0.5rem;
+								font-weight: 300;
+								font-size: 1em;
+							}
+						}
+					}
+				}
+			}
+
+			.skills {
+				margin: 1rem;
+				.card {
+					width: 325px;
+					height: 100vh;
+					margin-bottom: 1rem;
+					border-radius: 15px;
+					border: 2px solid rgb(221, 221, 221);
+					box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
+
+					.card-body {
+						margin: 2rem;
+						// .card-img {
+						// }
+						.progressbar-block {
+							border-radius: 30px;
+							background: $background-grey;
+							box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
+						}
+
+						.progressbar-set {
+							height: 10px;
+							border-radius: 30px;
+							background-image: linear-gradient(
+								to bottom,
+								rgba(255, 255, 255, 0.3),
+								rgba(255, 255, 255, 0.05)
+							);
+							transition: 0.4s linear;
+							transition-property: width, background-color;
+						}
+
+						.progressbar-moved .progressbar-set {
+							width: 85%;
+							background-color: $color-theme;
+							animation: progressbarAnimation 4s;
+						}
+
+						@keyframes progressbarAnimation {
+							0% {
+								width: 5%;
+								background-color: $color-theme;
+							}
+							100% {
+								width: 85%;
+								background-color: $color-theme;
+							}
+						}
+
+						// .card-title {
+						// 	color: $color-grey;
+						// 	text-transform: uppercase;
+						// }
 					}
 				}
 			}

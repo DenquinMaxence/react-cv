@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import Experiences from '../components/Experiences';
+import Formations from '../components/Formations';
+import Skills from '../components/Skills';
 import Profil from '../media/profil.png';
 
 const Home = () => {
@@ -70,16 +73,9 @@ const Home = () => {
 							intéressante à faire dans ce domaine.
 						</p>
 					</div>
-					<hr />
-					<div className='experiences'>
-						<h4 className='experience-title'>Expériences Professionnelles</h4>
-						<div className="card">
-							<div className="card-body">
-								<h3 className="card-title">Développeur full-stack</h3>
-								<h4 className="card-subtitle">Simplon.co</h4>
-							</div>
-						</div>
-					</div>
+					<Experiences />
+					<Formations />
+					<Skills />
 				</div>
 			</div>
 		</div>
