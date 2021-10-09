@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-cv/static/css/main.3ae4e6d3.chunk.css",
-    "main.js": "/react-cv/static/js/main.08e3ad02.chunk.js",
-    "main.js.map": "/react-cv/static/js/main.08e3ad02.chunk.js.map",
+    "main.js": "/react-cv/static/js/main.1ab65696.chunk.js",
+    "main.js.map": "/react-cv/static/js/main.1ab65696.chunk.js.map",
     "runtime-main.js": "/react-cv/static/js/runtime-main.6f6c640e.js",
     "runtime-main.js.map": "/react-cv/static/js/runtime-main.6f6c640e.js.map",
     "static/js/2.71d55e85.chunk.js": "/react-cv/static/js/2.71d55e85.chunk.js",
@@ -10,12 +10,16 @@
     "index.html": "/react-cv/index.html",
     "static/css/main.3ae4e6d3.chunk.css.map": "/react-cv/static/css/main.3ae4e6d3.chunk.css.map",
     "static/js/2.71d55e85.chunk.js.LICENSE.txt": "/react-cv/static/js/2.71d55e85.chunk.js.LICENSE.txt",
-    "static/media/profil.046c3082.png": "/react-cv/static/media/profil.046c3082.png"
+    "static/media/logo_heidisql.4e6e82e6.webp": "/react-cv/static/media/logo_heidisql.4e6e82e6.webp",
+    "static/media/logo_npm.65aa8f82.webp": "/react-cv/static/media/logo_npm.65aa8f82.webp",
+    "static/media/logo_symfony.fdf4bf0b.webp": "/react-cv/static/media/logo_symfony.fdf4bf0b.webp",
+    "static/media/logo_wampserver.4c61defe.webp": "/react-cv/static/media/logo_wampserver.4c61defe.webp",
+    "static/media/profil.6fc6d76d.webp": "/react-cv/static/media/profil.6fc6d76d.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.6f6c640e.js",
     "static/js/2.71d55e85.chunk.js",
     "static/css/main.3ae4e6d3.chunk.css",
-    "static/js/main.08e3ad02.chunk.js"
+    "static/js/main.1ab65696.chunk.js"
   ]
 }
