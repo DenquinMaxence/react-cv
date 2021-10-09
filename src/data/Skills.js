@@ -1,7 +1,7 @@
-import LogoSymfony from '../media/logo_symfony.png';
-import LogoWampServer from '../media/logo_wampserver.png';
-import LogoHeidiSQL from '../media/logo_heidisql.png';
-import LogoNPM from '../media/logo_npm.png';
+import LogoSymfony from '../media/logo_symfony.webp';
+import LogoWampServer from '../media/logo_wampserver.webp';
+import LogoHeidiSQL from '../media/logo_heidisql.webp';
+import LogoNPM from '../media/logo_npm.webp';
 
 export const SkillsData = [
 	{

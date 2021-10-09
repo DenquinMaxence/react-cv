@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Experiences from '../components/Experiences';
 import Formations from '../components/Formations';
 import Skills from '../components/Skills';
-import Profil from '../media/profil.png';
+import Profil from '../media/profil.webp';
 
 const Home = () => {
 	return (
