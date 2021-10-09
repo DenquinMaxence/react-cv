@@ -13,6 +13,7 @@ $background-grey: #f0f0f0;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -20,4 +21,14 @@ body {
 	line-height: 1.4rem;
 	background: $background-1;
 	color: $color-grey;
+}
+
+.theme-dark {
+	$background-1: #212121 !important;
+	$color-grey: #eaeaea !important;
+}
+
+hr {
+	margin: 1rem 30px 1rem 30px;
+	width: 50%;
 }

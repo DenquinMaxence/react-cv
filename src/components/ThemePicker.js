@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 
 const ThemePicker = () => {
 	const [themePicker, setThemePicker] = useState(false);
-	const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cobweb');
-	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' });
+	const [theme, setTheme] = useState(
+		localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cobweb'
+	);
+	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
 	const showThemePicker = () => {
 		const themePickerBox = document.querySelector('.theme-picker');
@@ -50,12 +52,16 @@ const ThemePicker = () => {
 					</>
 				)}
 				<strong className='subtitle'>Mode contrasté</strong>
-				<ul className="list-inline list-style list-bg-color">
-					<li className="dark">
-						<Link to="#" className="btn dark">dark</Link>
+				<ul className='list-inline list-style list-bg-color'>
+					<li className='dark'>
+						<Link to='#' className='btn dark'>
+							dark
+						</Link>
 					</li>
-					<li className="light">
-						<Link to="#" className="btn add">light</Link>
+					<li className='light'>
+						<Link to='#' className='btn add'>
+							light
+						</Link>
 					</li>
 				</ul>
 			</div>

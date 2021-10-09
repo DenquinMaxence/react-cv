@@ -1,7 +1,4 @@
-hr {
-	margin-bottom: 1rem;
-	margin-top: 1rem;
-}
+/* Mobile first */
 .main {
 	.left-part,
 	.right-part {
@@ -14,9 +11,9 @@ hr {
 	.left-part {
 		.profil-header {
 			background-color: $background-theme;
-			height: 15vh;
+			height: 7rem;
 			width: 100%;
-			z-index: -1;
+			z-index: -10;
 			position: absolute;
 			top: 0;
 			border-radius: 0px 0px 20px 20px / 20%;
@@ -24,12 +21,12 @@ hr {
 		}
 		.home-background {
 			background-color: $background-grey;
-			height: 60vh;
+			height: 28rem;
 			width: 100%;
-			z-index: -2;
+			z-index: -11;
 			position: absolute;
 			top: 0;
-			box-shadow: 0 5px 0 0 rgba(122, 122, 122, 0.1);
+			box-shadow: 0 5px 2px 0 rgba(122, 122, 122, 0.1);
 		}
 		.profil-pic {
 			img {
@@ -72,8 +69,8 @@ hr {
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr 1fr;
 				border-radius: 15px;
+				background-color: $background-1;
 				border: 2px solid rgb(221, 221, 221);
-				box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
 				width: 325px;
 				height: 325px;
 				margin-top: 2rem;
@@ -87,7 +84,7 @@ hr {
 					background-color: $background-theme;
 					border-radius: 15px;
 					margin: 10px;
-					color: white;
+					color: $background-1;
 					text-decoration: none;
 				}
 			}
@@ -102,23 +99,9 @@ hr {
 	}
 
 	.right-part {
+		color: $color-theme;
+		text-align: center;
 		.header {
-			color: $color-theme;
-			text-align: center;
-			hr {
-				margin-right: 30px;
-				margin-left: 30px;
-			}
-
-			.job-title,
-			.about .about-title,
-			.experiences .experience-title,
-			.formations .formation-title,
-			.skills .skill-title {
-				text-transform: uppercase;
-				letter-spacing: 2px;
-			}
-
 			.about {
 				margin: 2rem;
 				text-align: left;
@@ -129,20 +112,31 @@ hr {
 					font-size: 0.9em;
 				}
 			}
+		}
 
-			.experiences,
-			.formations {
-				margin: 1rem;
-				.experience-title,
-				.formation-title {
-					margin-bottom: 1rem;
-				}
+		.header .job-title,
+		.about .about-title,
+		.experiences .experience-title,
+		.formations .formation-title,
+		.skills .skill-title {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-bottom: 1rem;
+		}
+
+		.experiences,
+		.formations {
+			margin: 1rem;
+			.cards-block {
+				display: flex;
+				flex-flow: wrap;
+				justify-content: center;
+				align-items: center;
 				.card {
 					width: 325px;
 					margin-bottom: 1rem;
 					border-radius: 15px;
 					border: 2px solid rgb(221, 221, 221);
-					box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
 
 					.card-body {
 						margin: 2rem;
@@ -171,16 +165,20 @@ hr {
 					}
 				}
 			}
+		}
 
-			.skills {
-				margin: 1rem;
+		.skills {
+			margin: 1rem;
+			.cards-block {
+				display: flex;
+				flex-flow: wrap;
+				justify-content: center;
+				align-items: center;
 				.card {
 					width: 325px;
-					margin-top: 1rem;
 					margin-bottom: 1rem;
 					border-radius: 15px;
 					border: 2px solid rgb(221, 221, 221);
-					box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
 
 					.skill-subtitle {
 						margin-top: 1rem;
@@ -210,7 +208,6 @@ hr {
 							.progressbar-block {
 								border-radius: 30px;
 								background: $background-grey;
-								box-shadow: 0 0 0 0 rgba(122, 122, 122, 0.1);
 							}
 
 							.progressbar-set {
@@ -246,13 +243,58 @@ hr {
 			}
 		}
 	}
+}
 
-	@media screen and (min-width: 1224px) {
-		.main {
-			margin-right: 500px;
+@media screen and (max-width: 767px) and (orientation: landscape) {
+	.main {
+		.right-part {
+			.experiences,
+			.formations,
+			.skills {
+				.cards-block {
+					.card {
+						margin: 0.5rem !important;
+					}
+				}
+			}
 		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+	.main {
+		.right-part {
+			.experiences,
+			.formations,
+			.skills {
+				.cards-block {
+					.card {
+						margin: 0.5rem !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+	.main {
+		position: relative;
+		z-index: 1;
+		background-color: $background-1;
+		border: 2px solid rgb(221, 221, 221);
+		border-radius: 20px 20px 20px 20px;
+		box-shadow: 10px 5px 5px rgba(122, 122, 122, 0.1);
+		margin-right: 20%;
+		margin-left: 20%;
+
 		.left-part {
-			float: left;
+			.profil-header,
+			.home-background {
+				border-radius: 20px 20px 0 0;
+			}
 		}
 	}
 }

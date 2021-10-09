@@ -41,19 +41,19 @@ const Home = () => {
 				</div>
 				<div className='content'>
 					<div className='card'>
-						<Link to='#about' className='subcard'>
+						<Link to='#about' className='subcard' onClick={() => { window.location = "#about"}}>
 							<box-icon name='package' size='lg' color='white'></box-icon>
 							<span>À propos</span>
 						</Link>
-						<Link to='#experiences' className='subcard'>
+						<Link to='#experiences' className='subcard' onClick={() => { window.location = "#experiences"}}>
 							<box-icon name='briefcase' size='lg' color='white'></box-icon>
 							<span>Expériences</span>
 						</Link>
-						<Link to='#formation' className='subcard'>
+						<Link to='#formations' className='subcard' onClick={() => { window.location = "#formations"}}>
 							<box-icon name='code-block' size='lg' color='white'></box-icon>
 							<span>Formations</span>
 						</Link>
-						<Link to='#skills' className='subcard'>
+						<Link to='#skills' className='subcard' onClick={() => { window.location = "#skills"}}>
 							<box-icon name='folder-plus' size='lg' color='white'></box-icon>
 							<span>Compétences</span>
 						</Link>
@@ -73,10 +73,10 @@ const Home = () => {
 							intéressante à faire dans ce domaine.
 						</p>
 					</div>
-					<Experiences />
-					<Formations />
-					<Skills />
 				</div>
+				<Experiences />
+				<Formations />
+				<Skills />
 			</div>
 		</div>
 	);

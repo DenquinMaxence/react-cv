@@ -1,5 +1,5 @@
 .theme-picker {
-	top: 260px;
+	top: 25%;
 	left: 0;
 	width: 244px;
 	z-index: 9999;
@@ -12,6 +12,10 @@
 	-webkit-transition: 0.4s;
 	transition-property: transform;
 	box-shadow: 5px 5px 0 0 rgba(122, 122, 122, 0.1);
+
+	// @media screen and (max-width: 767px) and (orientation: landscape) {
+	// 	top: 150px;
+	// }
 
 	&.active {
 		transform: translate(245px, 0);
