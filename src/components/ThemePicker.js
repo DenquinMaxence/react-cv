@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeData } from '../data/Theme';
 import { useMediaQuery } from 'react-responsive';
 import ParticlesBg from 'particles-bg';
@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 
 const ThemePicker = () => {
 	const [themePicker, setThemePicker] = useState(false);
-	const [theme, setTheme] = useState(
-		localStorage.getItem('theme') ? localStorage.getItem('theme') : 'cobweb'
+	const [themeColor, setThemeColor] = useState(
+		localStorage.getItem('themeColor') ? localStorage.getItem('themeColor') : 'theme-blue'
+	);
+	const [themeStyle, setThemeStyle] = useState(
+		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
@@ -17,14 +20,33 @@ const ThemePicker = () => {
 		setThemePicker(!themePicker);
 	};
 
-	const handleTheme = (themeSelected) => {
-		setTheme(themeSelected);
-		localStorage.setItem('theme', themeSelected);
+	const handleThemeColor = (color) => {
+		setThemeColor(color);
+		localStorage.setItem('themeColor', color);
 	};
+
+	const handleThemeStyle = (style) => {
+		setThemeStyle(style);
+		localStorage.setItem('themeStyle', style);
+	};
+
+	useEffect(() => {
+		const mainBlock = document.querySelector('.main');
+		if (mainBlock) {
+			const oldThemeColor = mainBlock.classList[1] ? mainBlock.classList[1] : '';
+
+			if (oldThemeColor === '') {
+				mainBlock.classList.add(themeColor);
+			} else {
+				mainBlock.classList.remove(oldThemeColor);
+				mainBlock.classList.add(themeColor);
+			}
+		}
+	}, [themeColor]);
 
 	return (
 		<>
-			{isDesktopOrLaptop && <ParticlesBg type={theme} bg={true} />}
+			{isDesktopOrLaptop && <ParticlesBg type={themeStyle} bg={true} />}
 			<div className='theme-picker'>
 				<Link to='#' className='theme-picker-opener'>
 					<box-icon
@@ -37,18 +59,31 @@ const ThemePicker = () => {
 					/>
 				</Link>
 				<strong className='title'>Theme Picker</strong>
+				<strong className='subtitle'>Couleur du thème</strong>
+				<ul className='list-inline list-color'>
+					{ThemeData.color.length > 0 &&
+						ThemeData.color.map((color, index) => {
+							return (
+								<li className={color} key={index}>
+									<Link to='#' onClick={() => handleThemeColor(color)} />
+								</li>
+							);
+						})}
+				</ul>
 				{isDesktopOrLaptop && (
 					<>
 						<strong className='subtitle'>Type de thème</strong>
-						<select defaultValue={theme}>
-							{ThemeData.map((themeSelector, index) => {
-								return (
-									<option onClick={() => handleTheme(themeSelector)} key={index}>
-										{themeSelector}
-									</option>
-								);
-							})}
+						<select defaultValue={themeStyle}>
+							{ThemeData.style.length > 0 &&
+								ThemeData.style.map((style, index) => {
+									return (
+										<option onClick={() => handleThemeStyle(style)} key={index}>
+											{style}
+										</option>
+									);
+								})}
 						</select>
+						<hr />
 					</>
 				)}
 				<strong className='subtitle'>Mode contrasté</strong>

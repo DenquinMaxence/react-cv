@@ -23,9 +23,43 @@ body {
 	color: $color-grey;
 }
 
-.theme-dark {
-	$background-1: #212121 !important;
-	$color-grey: #eaeaea !important;
+.main.theme-dark {
+	background: #212121 !important;
+	color: #eaeaea !important;
+}
+
+.main.theme-blue {
+	$background-theme: #3991a5 !important;
+	$color-theme: #3991a5 !important;
+	// background: #3991a5;
+	// color: #3991a5;
+}
+
+.main.theme-red {
+	// background: #e74c3c;
+	// color: #e74c3c;
+	$background-theme: #e74c3c !important;
+	$color-theme: #e74c3c !important;
+}
+
+.main.theme-green {
+	background: #27ae60;
+	color: #27ae60;
+}
+
+.main.theme-taupe {
+	background: #ad8368 !important;
+	color: #ad8368 !important;
+}
+
+.main.theme-orange {
+	background: #f96015;
+	color: #f96015;
+}
+
+.main.theme-dust {
+	background: #c7b29b;
+	color: #c7b29b;
 }
 
 hr {
