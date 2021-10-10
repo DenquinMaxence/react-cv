@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-cv/static/css/main.3ae4e6d3.chunk.css",
-    "main.js": "/react-cv/static/js/main.1ab65696.chunk.js",
-    "main.js.map": "/react-cv/static/js/main.1ab65696.chunk.js.map",
+    "main.css": "/react-cv/static/css/main.40fec7dc.chunk.css",
+    "main.js": "/react-cv/static/js/main.44a2053f.chunk.js",
+    "main.js.map": "/react-cv/static/js/main.44a2053f.chunk.js.map",
     "runtime-main.js": "/react-cv/static/js/runtime-main.6f6c640e.js",
     "runtime-main.js.map": "/react-cv/static/js/runtime-main.6f6c640e.js.map",
-    "static/js/2.71d55e85.chunk.js": "/react-cv/static/js/2.71d55e85.chunk.js",
-    "static/js/2.71d55e85.chunk.js.map": "/react-cv/static/js/2.71d55e85.chunk.js.map",
+    "static/js/2.9f2d4d41.chunk.js": "/react-cv/static/js/2.9f2d4d41.chunk.js",
+    "static/js/2.9f2d4d41.chunk.js.map": "/react-cv/static/js/2.9f2d4d41.chunk.js.map",
     "index.html": "/react-cv/index.html",
-    "static/css/main.3ae4e6d3.chunk.css.map": "/react-cv/static/css/main.3ae4e6d3.chunk.css.map",
-    "static/js/2.71d55e85.chunk.js.LICENSE.txt": "/react-cv/static/js/2.71d55e85.chunk.js.LICENSE.txt",
+    "static/css/main.40fec7dc.chunk.css.map": "/react-cv/static/css/main.40fec7dc.chunk.css.map",
+    "static/js/2.9f2d4d41.chunk.js.LICENSE.txt": "/react-cv/static/js/2.9f2d4d41.chunk.js.LICENSE.txt",
     "static/media/logo_heidisql.4e6e82e6.webp": "/react-cv/static/media/logo_heidisql.4e6e82e6.webp",
     "static/media/logo_npm.65aa8f82.webp": "/react-cv/static/media/logo_npm.65aa8f82.webp",
     "static/media/logo_symfony.fdf4bf0b.webp": "/react-cv/static/media/logo_symfony.fdf4bf0b.webp",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6f6c640e.js",
-    "static/js/2.71d55e85.chunk.js",
-    "static/css/main.3ae4e6d3.chunk.css",
-    "static/js/main.1ab65696.chunk.js"
+    "static/js/2.9f2d4d41.chunk.js",
+    "static/css/main.40fec7dc.chunk.css",
+    "static/js/main.44a2053f.chunk.js"
   ]
 }
