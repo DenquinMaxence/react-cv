@@ -15,7 +15,9 @@ const ThemePicker = () => {
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
-	const [themeDark, setThemeDark] = useState(localStorage.getItem('themeDark') ? localStorage.getItem('themeDark') : false);
+	const [themeDark, setThemeDark] = useState(
+		localStorage.getItem('themeDark') ? localStorage.getItem('themeDark') : false
+	);
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
 	const showThemePicker = () => {
@@ -59,13 +61,23 @@ const ThemePicker = () => {
 				getComputedStyle(mainBlock).getPropertyValue('--background-theme')
 			);
 
-			(themeDark === "true") ? mainBlock.classList.add('theme-dark') : mainBlock.classList.remove('theme-dark');
+			themeDark === 'true'
+				? mainBlock.classList.add('theme-dark')
+				: mainBlock.classList.remove('theme-dark');
 		}
 	}, [themeColor, themeDark]);
 
 	return (
 		<>
-			{isDesktopOrLaptop && <ParticlesBg type={themeStyle} bg={true} />}
+			{isDesktopOrLaptop && (
+				<ParticlesBg
+					type={themeStyle}
+					bg={{
+						position: 'absolute',
+						height: window.outerHeight + window.innerHeight,
+					}}
+				/>
+			)}
 			<div className='theme-picker'>
 				<Link to='#' className='theme-picker-opener'>
 					<box-icon
@@ -111,18 +123,12 @@ const ThemePicker = () => {
 				<strong className='subtitle'>Mode contrasté</strong>
 				<ul className='list-inline list-style list-bg-color'>
 					<li className='dark'>
-						<Link
-							to='#'
-							className='btn dark'
-							onClick={() => handleThemeDark("true")}>
+						<Link to='#' className='btn dark' onClick={() => handleThemeDark('true')}>
 							dark
 						</Link>
 					</li>
 					<li className='light'>
-						<Link
-							to='#'
-							className='btn add'
-							onClick={() => handleThemeDark("false")}>
+						<Link to='#' className='btn add' onClick={() => handleThemeDark('false')}>
 							light
 						</Link>
 					</li>
