@@ -6,7 +6,7 @@ import Skills from '../components/Skills';
 import Profil from '../media/profil.webp';
 
 const Home = () => {
-	const [themeColorHexa, setThemeColorHexa] = useState(localStorage.getItem('themeColorHexa'));
+	const [themeColorHexa, setThemeColorHexa] = useState(localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : '#3991a5');
 
 	setInterval(() => {
 		setThemeColorHexa(localStorage.getItem('themeColorHexa'));
