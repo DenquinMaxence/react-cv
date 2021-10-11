@@ -10,7 +10,7 @@
 	}
 	.left-part {
 		.profil-header {
-			background-color: $background-theme;
+			background-color: var(--background-theme);
 			height: 7rem;
 			width: 100%;
 			z-index: -10;
@@ -20,7 +20,7 @@
 			box-shadow: 0 5px 0 0 rgba(122, 122, 122, 0.1);
 		}
 		.home-background {
-			background: $background-grey;
+			background: var(--background-grey);
 			height: 28rem;
 			width: 100%;
 			z-index: -11;
@@ -33,7 +33,7 @@
 				width: 150px;
 				height: 150px;
 				border-radius: 50%;
-				border: 7px solid $background-grey;
+				border: 7px solid var(--background-grey);
 			}
 		}
 		.profil-content {
@@ -48,7 +48,7 @@
 
 				a {
 					text-decoration: none;
-					color: $color-grey;
+					color: var(--color-grey);
 				}
 			}
 			.profil-about {
@@ -69,7 +69,7 @@
 				grid-template-columns: 1fr 1fr;
 				grid-template-rows: 1fr 1fr;
 				border-radius: 15px;
-				background-color: $background-1;
+				background-color: var(--background-1);
 				border: 2px solid rgb(221, 221, 221);
 				width: 325px;
 				height: 325px;
@@ -81,10 +81,10 @@
 					justify-content: space-evenly;
 					align-items: center;
 					flex-flow: column wrap;
-					background-color: $background-theme;
+					background-color: var(--background-theme);
 					border-radius: 15px;
 					margin: 10px;
-					color: $background-1;
+					color: var(--background-1);
 					text-decoration: none;
 				}
 			}
@@ -99,7 +99,7 @@
 	}
 
 	.right-part {
-		color: $color-theme;
+		color: var(--color-theme);
 		text-align: center;
 		.header {
 			.about {
@@ -107,7 +107,7 @@
 				text-align: left;
 
 				.about-text {
-					color: $color-grey;
+					color: var(--color-grey);
 					font-weight: 200;
 					font-size: 0.9em;
 				}
@@ -142,7 +142,7 @@
 						margin: 2rem;
 						.card-title,
 						.card-subtitle {
-							color: $color-grey;
+							color: var(--color-grey);
 							text-transform: uppercase;
 						}
 						.card-subtitle {
@@ -154,7 +154,7 @@
 							margin-top: 1rem;
 							list-style: none;
 							li {
-								color: $color-grey;
+								color: var(--color-grey);
 							}
 							li:nth-child(2) {
 								margin-top: 0.5rem;
@@ -184,7 +184,7 @@
 						margin-top: 1rem;
 						letter-spacing: 2px;
 						text-transform: uppercase;
-						color: $color-grey;
+						color: var(--color-grey);
 					}
 
 					.card-body {
@@ -197,7 +197,7 @@
 							margin-right: 15px;
 						}
 						.card-title {
-							color: $color-grey;
+							color: var(--color-grey);
 							margin-bottom: 0.5rem;
 							text-align: left;
 							text-transform: uppercase;
@@ -207,7 +207,7 @@
 							width: 75%;
 							.progressbar-block {
 								border-radius: 30px;
-								background: $background-grey;
+								background: var(--background-grey);
 							}
 
 							.progressbar-set {
@@ -223,18 +223,18 @@
 							}
 
 							.progressbar-moved .progressbar-set {
-								background-color: $color-theme;
+								background-color: var(--color-theme);
 								animation: progressbarAnimation 4s;
 							}
 
 							@keyframes progressbarAnimation {
 								0% {
 									width: 0%;
-									background-color: $color-theme;
+									background-color: var(--color-theme);
 								}
 								100% {
 									width: 100%;
-									background-color: $color-theme;
+									background-color: var(--color-theme);
 								}
 							}
 						}
@@ -283,7 +283,7 @@
 	.main {
 		position: relative;
 		z-index: 1;
-		background-color: $background-1;
+		background-color: var(--background-1);
 		border: 2px solid rgb(221, 221, 221);
 		border-radius: 20px 20px 20px 20px;
 		box-shadow: 10px 5px 5px rgba(122, 122, 122, 0.1);

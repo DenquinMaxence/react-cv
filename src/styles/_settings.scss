@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,400&display=swap');
 
-$font-1: 'Poppins', sans-serif;
+:root {
+	--font-1: 'Poppins', sans-serif;
 
-$background-1: #ffffff;
+	--background-1: #ffffff;
 
-$color-theme: #3991a5;
-$color-grey: #3a4258;
-$background-theme: #3991a5;
-$background-grey: #f0f0f0;
+	--color-theme: #3991a5;
+	--color-grey: #3a4258;
+	--background-theme: #3991a5;
+	--background-grey: #f0f0f0;
+}
 
 * {
 	box-sizing: border-box;
@@ -17,49 +19,45 @@ $background-grey: #f0f0f0;
 }
 
 body {
-	font-family: $font-1;
+	font-family: var(--font-1);
 	line-height: 1.4rem;
-	background: $background-1;
-	color: $color-grey;
+	background: var(--background-1);
+	color: var(--color-grey);
 }
 
 .main.theme-dark {
-	background: #212121 !important;
-	color: #eaeaea !important;
+	--background-1: #212121;
+	--color-grey: #eaeaea;
 }
 
 .main.theme-blue {
-	$background-theme: #3991a5 !important;
-	$color-theme: #3991a5 !important;
-	// background: #3991a5;
-	// color: #3991a5;
+	--background-theme: #3991a5;
+	--color-theme: #3991a5;
 }
 
 .main.theme-red {
-	// background: #e74c3c;
-	// color: #e74c3c;
-	$background-theme: #e74c3c !important;
-	$color-theme: #e74c3c !important;
+	--background-theme: #e74c3c;
+	--color-theme: #e74c3c;
 }
 
 .main.theme-green {
-	background: #27ae60;
-	color: #27ae60;
+	--background-theme: #27ae60;
+	--color-theme: #27ae60;
 }
 
 .main.theme-taupe {
-	background: #ad8368 !important;
-	color: #ad8368 !important;
+	--background-theme: #ad8368;
+	--color-theme: #ad8368;
 }
 
 .main.theme-orange {
-	background: #f96015;
-	color: #f96015;
+	--background-theme: #f96015;
+	--color-theme: #f96015;
 }
 
 .main.theme-dust {
-	background: #c7b29b;
-	color: #c7b29b;
+	--background-theme: #c7b29b;
+	--color-theme: #c7b29b;
 }
 
 hr {

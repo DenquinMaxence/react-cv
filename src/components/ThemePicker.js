@@ -12,6 +12,7 @@ const ThemePicker = () => {
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
+	const [themeMode, setThemeMode] = useState('theme-light');
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
 	const showThemePicker = () => {
@@ -30,6 +31,11 @@ const ThemePicker = () => {
 		localStorage.setItem('themeStyle', style);
 	};
 
+	const handleThemeMode = (theme) => {
+		setThemeMode(theme);
+		localStorage.setItem('themeMode', theme);
+	};
+
 	useEffect(() => {
 		const mainBlock = document.querySelector('.main');
 		if (mainBlock) {
@@ -42,7 +48,10 @@ const ThemePicker = () => {
 				mainBlock.classList.add(themeColor);
 			}
 		}
-	}, [themeColor]);
+
+		// const bodyBlock = document.getElementsByTagName('body')[0];
+		// console.log(bodyBlock.classList.add(themeMode));
+	}, [themeColor, themeMode]);
 
 	return (
 		<>
@@ -54,7 +63,7 @@ const ThemePicker = () => {
 						type='solid'
 						animation='spin'
 						flip='horizontal'
-						color='#1DA0F0'
+						color="#3991a5"
 						onClick={showThemePicker}
 					/>
 				</Link>
@@ -73,28 +82,31 @@ const ThemePicker = () => {
 				{isDesktopOrLaptop && (
 					<>
 						<strong className='subtitle'>Type de thème</strong>
-						<select defaultValue={themeStyle}>
-							{ThemeData.style.length > 0 &&
-								ThemeData.style.map((style, index) => {
-									return (
-										<option onClick={() => handleThemeStyle(style)} key={index}>
-											{style}
-										</option>
-									);
-								})}
-						</select>
-						<hr />
+						<div className='select-style'>
+							<select defaultValue={themeStyle}>
+								{ThemeData.style.length > 0 &&
+									ThemeData.style.map((style, index) => {
+										return (
+											<option
+												onClick={() => handleThemeStyle(style)}
+												key={index}>
+												{style}
+											</option>
+										);
+									})}
+							</select>
+						</div>
 					</>
 				)}
 				<strong className='subtitle'>Mode contrasté</strong>
 				<ul className='list-inline list-style list-bg-color'>
 					<li className='dark'>
-						<Link to='#' className='btn dark'>
+						<Link to='#' className='btn dark' onClick={() => handleThemeMode('theme-dark')}>
 							dark
 						</Link>
 					</li>
 					<li className='light'>
-						<Link to='#' className='btn add'>
+						<Link to='#' className='btn add' onClick={() => handleThemeMode('theme-light')}>
 							light
 						</Link>
 					</li>
