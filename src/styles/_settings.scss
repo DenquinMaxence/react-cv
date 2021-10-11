@@ -23,16 +23,12 @@ body {
 	line-height: 1.4rem;
 	background: var(--background-1);
 	color: var(--color-grey);
-	transition: 0.5s;
-}
-
-.bx-flip-horizontal {
-	fill: #3a4258 !important;
 }
 
 .main.theme-dark {
 	--background-1: #212121;
 	--color-grey: #eaeaea;
+	--background-grey: #3a3a3a;
 }
 
 .main.theme-blue {
@@ -67,5 +63,4 @@ body {
 
 hr {
 	margin: 1rem 30px 1rem 30px;
-	width: 50%;
 }

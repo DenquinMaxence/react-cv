@@ -1,5 +1,8 @@
 /* Mobile first */
 .main {
+	position: relative;
+	z-index: 1;
+	background-color: var(--background-1);
 	.left-part,
 	.right-part {
 		display: flex;
@@ -38,6 +41,7 @@
 		}
 		.profil-content {
 			text-align: center;
+			color: var(--color-grey);
 			.profil-name {
 				margin-bottom: 1rem;
 			}
@@ -84,7 +88,7 @@
 					background-color: var(--background-theme);
 					border-radius: 15px;
 					margin: 10px;
-					color: var(--background-1);
+					color: #ffffff;
 					text-decoration: none;
 				}
 			}

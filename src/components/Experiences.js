@@ -1,14 +1,15 @@
 import { ExperiencesData } from '../data/Experiences';
 
-const Experiences = () => {
+const Experiences = ({ color }) => {
+	const ExpData = ExperiencesData(color);
 	return (
 		<>
 			<hr />
-			<div className='experiences' id="experiences">
+			<div className='experiences' id='experiences'>
 				<h4 className='experience-title'>Expériences Professionnelles</h4>
 				<div className='cards-block'>
-					{ExperiencesData.length > 0 &&
-						ExperiencesData.map((experience, index) => {
+					{ExpData.length > 0 &&
+						ExpData.map((experience, index) => {
 							return (
 								<div className='card' key={index}>
 									<div className='card-body'>

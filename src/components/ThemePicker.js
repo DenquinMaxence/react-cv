@@ -15,7 +15,7 @@ const ThemePicker = () => {
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
-	const [themeMode, setThemeMode] = useState('theme-light');
+	const [themeDark, setThemeDark] = useState(localStorage.getItem('themeDark') ? localStorage.getItem('themeDark') : false);
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
 	const showThemePicker = () => {
@@ -39,9 +39,9 @@ const ThemePicker = () => {
 		localStorage.setItem('themeStyle', style);
 	};
 
-	const handleThemeMode = (theme) => {
-		setThemeMode(theme);
-		localStorage.setItem('themeMode', theme);
+	const handleThemeDark = (state) => {
+		setThemeDark(state);
+		localStorage.setItem('themeDark', state);
 	};
 
 	useEffect(() => {
@@ -58,11 +58,10 @@ const ThemePicker = () => {
 			handleThemeColorHexa(
 				getComputedStyle(mainBlock).getPropertyValue('--background-theme')
 			);
-		}
 
-		// const bodyBlock = document.getElementsByTagName('body')[0];
-		// console.log(bodyBlock.classList.add(themeMode));
-	}, [themeColor, themeMode]);
+			(themeDark === "true") ? mainBlock.classList.add('theme-dark') : mainBlock.classList.remove('theme-dark');
+		}
+	}, [themeColor, themeDark]);
 
 	return (
 		<>
@@ -115,7 +114,7 @@ const ThemePicker = () => {
 						<Link
 							to='#'
 							className='btn dark'
-							onClick={() => handleThemeMode('theme-dark')}>
+							onClick={() => handleThemeDark("true")}>
 							dark
 						</Link>
 					</li>
@@ -123,7 +122,7 @@ const ThemePicker = () => {
 						<Link
 							to='#'
 							className='btn add'
-							onClick={() => handleThemeMode('theme-light')}>
+							onClick={() => handleThemeDark("false")}>
 							light
 						</Link>
 					</li>

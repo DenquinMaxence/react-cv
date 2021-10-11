@@ -1,14 +1,15 @@
 import { FormationsData } from '../data/Formations';
 
-const Formations = () => {
+const Formations = ({ color }) => {
+	const FormData = FormationsData(color);
 	return (
 		<>
 			<hr />
-			<div className='formations' id="formations">
+			<div className='formations' id='formations'>
 				<h4 className='formation-title'>Formations</h4>
 				<div className='cards-block'>
-					{FormationsData.length > 0 &&
-						FormationsData.map((formation, index) => {
+					{FormData.length > 0 &&
+						FormData.map((formation, index) => {
 							return (
 								<div className='card' key={index}>
 									<div className='card-body'>
