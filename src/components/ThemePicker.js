@@ -9,6 +9,9 @@ const ThemePicker = () => {
 	const [themeColor, setThemeColor] = useState(
 		localStorage.getItem('themeColor') ? localStorage.getItem('themeColor') : 'theme-blue'
 	);
+	const [themeColorHexa, setThemeColorHexa] = useState(
+		localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : '#3991a5'
+	);
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
@@ -24,6 +27,11 @@ const ThemePicker = () => {
 	const handleThemeColor = (color) => {
 		setThemeColor(color);
 		localStorage.setItem('themeColor', color);
+	};
+
+	const handleThemeColorHexa = (colorHexa) => {
+		setThemeColorHexa(colorHexa);
+		localStorage.setItem('themeColorHexa', colorHexa);
 	};
 
 	const handleThemeStyle = (style) => {
@@ -47,6 +55,9 @@ const ThemePicker = () => {
 				mainBlock.classList.remove(oldThemeColor);
 				mainBlock.classList.add(themeColor);
 			}
+			handleThemeColorHexa(
+				getComputedStyle(mainBlock).getPropertyValue('--background-theme')
+			);
 		}
 
 		// const bodyBlock = document.getElementsByTagName('body')[0];
@@ -63,7 +74,7 @@ const ThemePicker = () => {
 						type='solid'
 						animation='spin'
 						flip='horizontal'
-						color="#3991a5"
+						color={themeColorHexa}
 						onClick={showThemePicker}
 					/>
 				</Link>
@@ -101,12 +112,18 @@ const ThemePicker = () => {
 				<strong className='subtitle'>Mode contrasté</strong>
 				<ul className='list-inline list-style list-bg-color'>
 					<li className='dark'>
-						<Link to='#' className='btn dark' onClick={() => handleThemeMode('theme-dark')}>
+						<Link
+							to='#'
+							className='btn dark'
+							onClick={() => handleThemeMode('theme-dark')}>
 							dark
 						</Link>
 					</li>
 					<li className='light'>
-						<Link to='#' className='btn add' onClick={() => handleThemeMode('theme-light')}>
+						<Link
+							to='#'
+							className='btn add'
+							onClick={() => handleThemeMode('theme-light')}>
 							light
 						</Link>
 					</li>

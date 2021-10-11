@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Experiences from '../components/Experiences';
 import Formations from '../components/Formations';
@@ -5,6 +6,12 @@ import Skills from '../components/Skills';
 import Profil from '../media/profil.webp';
 
 const Home = () => {
+	const [themeColorHexa, setThemeColorHexa] = useState(localStorage.getItem('themeColorHexa'));
+
+	setInterval(() => {
+		setThemeColorHexa(localStorage.getItem('themeColorHexa'));
+	}, 500);
+
 	return (
 		<div className='main'>
 			<div className='left-part'>
@@ -18,21 +25,31 @@ const Home = () => {
 					<span className='profil-description'>Développeur web full-stack</span>
 					<div className='profil-about'>
 						<div>
-							<box-icon name='calendar' flip='horizontal' color='#3991a5' />
+							<box-icon name='calendar' flip='horizontal' color={themeColorHexa} />
 							<span>09/09/2000</span>
 						</div>
 						<div>
-							<box-icon name='phone' type='solid' flip='horizontal' color='#3991a5' />
+							<box-icon
+								name='phone'
+								type='solid'
+								flip='horizontal'
+								color={themeColorHexa}
+							/>
 							<span>
 								<a href='tel:+06.77.59.83.10'>06.77.59.83.10</a>
 							</span>
 						</div>
 						<div>
-							<box-icon name='home' type='solid' flip='horizontal' color='#3991a5' />
+							<box-icon
+								name='home'
+								type='solid'
+								flip='horizontal'
+								color={themeColorHexa}
+							/>
 							<span>Outreau, 62230</span>
 						</div>
 						<div>
-							<box-icon name='envelope' color='#3991a5' />
+							<box-icon name='envelope' color={themeColorHexa} />
 							<span>
 								<a href='mailto:denquin.maxence.pro@gmail.com'>Me contactez</a>
 							</span>
