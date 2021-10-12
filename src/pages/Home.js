@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ColorContext } from '../components/AppContext';
 import Experiences from '../components/Experiences';
 import Formations from '../components/Formations';
 import Skills from '../components/Skills';
 import Profil from '../media/profil.webp';
 
 const Home = () => {
+	const color = useContext(ColorContext);
 	const [themeColorHexa, setThemeColorHexa] = useState(
-		localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : '#3991a5'
+		localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : color
 	);
 
 	setInterval(() => {

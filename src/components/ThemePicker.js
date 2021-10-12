@@ -6,18 +6,23 @@ import { Link } from 'react-router-dom';
 
 const ThemePicker = () => {
 	const [themePicker, setThemePicker] = useState(false);
+
 	const [themeColor, setThemeColor] = useState(
 		localStorage.getItem('themeColor') ? localStorage.getItem('themeColor') : 'theme-blue'
 	);
+
 	const [themeColorHexa, setThemeColorHexa] = useState(
 		localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : '#3991a5'
 	);
+
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
 	);
+
 	const [themeDark, setThemeDark] = useState(
 		localStorage.getItem('themeDark') ? localStorage.getItem('themeDark') : false
 	);
+
 	const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1200px)' });
 
 	const showThemePicker = () => {
