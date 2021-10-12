@@ -13,6 +13,7 @@ function App() {
 				: '#3991a5';
 			if (colorRes !== '') {
 				setColor(colorRes);
+				localStorage.setItem('themeColorHexa', colorRes);
 			}
 		};
 		if (!color) fetchColor();
