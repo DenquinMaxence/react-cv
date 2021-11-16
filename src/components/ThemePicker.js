@@ -3,14 +3,12 @@ import { ThemeData } from '../data/Theme';
 import { useMediaQuery } from 'react-responsive';
 import ParticlesBg from 'particles-bg';
 import { Link } from 'react-router-dom';
+import { FaCog } from 'react-icons/fa';
 
 const ThemePicker = () => {
 	const [themePicker, setThemePicker] = useState(false);
 	const [themeColor, setThemeColor] = useState(
-		localStorage.getItem('themeColor') ? localStorage.getItem('themeColor') : 'theme-blue'
-	);
-	const [themeColorHexa, setThemeColorHexa] = useState(
-		localStorage.getItem('themeColorHexa') ? localStorage.getItem('themeColorHexa') : '#3991a5'
+		localStorage.getItem('themeColor') ? localStorage.getItem('themeColor') : '#3991a5'
 	);
 	const [themeStyle, setThemeStyle] = useState(
 		localStorage.getItem('themeStyle') ? localStorage.getItem('themeStyle') : 'cobweb'
@@ -28,12 +26,8 @@ const ThemePicker = () => {
 
 	const handleThemeColor = (color) => {
 		setThemeColor(color);
+		document.documentElement.style.setProperty('--color-theme', color);
 		localStorage.setItem('themeColor', color);
-	};
-
-	const handleThemeColorHexa = (colorHexa) => {
-		setThemeColorHexa(colorHexa);
-		localStorage.setItem('themeColorHexa', colorHexa);
 	};
 
 	const handleThemeStyle = (style) => {
@@ -47,24 +41,11 @@ const ThemePicker = () => {
 	};
 
 	useEffect(() => {
-		const mainBlock = document.querySelector('.main');
-		if (mainBlock) {
-			const oldThemeColor = mainBlock.classList[1] ? mainBlock.classList[1] : '';
+		handleThemeColor(themeColor);
 
-			if (oldThemeColor === '') {
-				mainBlock.classList.add(themeColor);
-			} else {
-				mainBlock.classList.remove(oldThemeColor);
-				mainBlock.classList.add(themeColor);
-			}
-			handleThemeColorHexa(
-				getComputedStyle(mainBlock).getPropertyValue('--background-theme')
-			);
-
-			themeDark === 'true'
-				? mainBlock.classList.add('theme-dark')
-				: mainBlock.classList.remove('theme-dark');
-		}
+		themeDark === 'true'
+			? document.documentElement.classList.add('theme-dark')
+			: document.documentElement.classList.remove('theme-dark');
 	}, [themeColor, themeDark]);
 
 	return (
@@ -80,14 +61,7 @@ const ThemePicker = () => {
 			)}
 			<div className='theme-picker'>
 				<Link to='#' className='theme-picker-opener'>
-					<box-icon
-						name='cog'
-						type='solid'
-						animation='spin'
-						flip='horizontal'
-						color={themeColorHexa}
-						onClick={showThemePicker}
-					/>
+					<FaCog className='fa-spin' onClick={showThemePicker} />
 				</Link>
 				<strong className='title'>Theme Picker</strong>
 				<strong className='subtitle'>Couleur du thème</strong>
@@ -95,8 +69,8 @@ const ThemePicker = () => {
 					{ThemeData.color.length > 0 &&
 						ThemeData.color.map((color, index) => {
 							return (
-								<li className={color} key={index}>
-									<Link to='#' onClick={() => handleThemeColor(color)} />
+								<li className={color.name} key={index}>
+									<Link to='#' onClick={() => handleThemeColor(color.hexa)} />
 								</li>
 							);
 						})}

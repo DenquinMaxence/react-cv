@@ -32,6 +32,19 @@
 		border-top: 1px solid #eee;
 		border-bottom: 1px solid #eee;
 		box-shadow: 5px 5px 0 0 rgba(122, 122, 122, 0.1);
+
+		.fa-spin {
+			animation: fa-spin 2s infinite linear;
+			color: var(--color-theme);
+		}
+		@keyframes fa-spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(359deg);
+			}
+		}
 	}
 
 	a {

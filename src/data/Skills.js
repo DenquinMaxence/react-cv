@@ -1,7 +1,19 @@
-import LogoSymfony from '../media/logo_symfony.webp';
 import LogoWampServer from '../media/logo_wampserver.webp';
 import LogoHeidiSQL from '../media/logo_heidisql.webp';
-import LogoNPM from '../media/logo_npm.webp';
+import {
+	FaHtml5,
+	FaCss3Alt,
+	FaPhp,
+	FaJs,
+	FaSass,
+	FaSymfony,
+	FaNodeJs,
+	FaReact,
+	FaGitAlt,
+	FaNpm,
+	FaVuejs,
+} from 'react-icons/fa';
+import { SiRedux, SiVisualstudiocode, SiMongodb, SiMysql } from 'react-icons/si';
 
 export const SkillsData = [
 	{
@@ -9,57 +21,67 @@ export const SkillsData = [
 		data: [
 			{
 				title: 'Html 5',
-				icon: <box-icon name='html5' type='logo' size='lg' color='#dd4b25' />,
+				icon: <FaHtml5 size='48' color='#dd4b25' />,
 				width: '100%',
 			},
 			{
 				title: 'Css 3',
-				icon: <box-icon name='css3' type='logo' size='lg' color='#254bdd' />,
+				icon: <FaCss3Alt size='48' color='#254bdd' />,
 				width: '100%',
 			},
 			{
-				title: 'Php Procedural',
-				icon: <box-icon name='php' type='logo' size='lg' color='#7377ad' />,
-				width: '100%',
-			},
-			{
-				title: 'Php Object',
-				icon: <box-icon name='php' type='logo' size='lg' color='#7377ad' />,
+				title: 'Php',
+				icon: <FaPhp size='48' color='#7377ad' />,
 				width: '100%',
 			},
 			{
 				title: 'Javascript',
-				icon: <box-icon name='javascript' type='logo' size='lg' color='#efd81d' />,
+				icon: <FaJs size='48' color='#efd81d' />,
+				width: '100%',
+			},
+			{
+				title: 'Sass',
+				icon: <FaSass size='48' color='#c76293' />,
+				width: '100%',
+			},
+			{
+				title: 'NodeJs',
+				icon: <FaNodeJs size='48' color='#509941' />,
 				width: '100%',
 			},
 		],
 	},
 	{
-		name: 'Frameworks',
+		name: 'Frameworks / Bibliothèques',
 		data: [
 			{
-				title: 'Sass',
-				icon: <box-icon name='sass' type='logo' size='lg' color='#c76293' />,
-				width: '100%',
-			},
-			{
 				title: 'Symfony 4',
-				icon: <img src={LogoSymfony} alt='logo-symfony' width='48px;' height='48px;' />,
-				width: '100%',
-			},
-			{
-				title: 'NodeJs',
-				icon: <box-icon name='nodejs' type='logo' size='lg' color='#509941' />,
+				icon: <FaSymfony size='48' color='#000000' />,
 				width: '100%',
 			},
 			{
 				title: 'ReactJs',
-				icon: <box-icon name='react' type='logo' size='lg' color='#5ed3f3' />,
+				icon: <FaReact size='48' color='#5ed3f3' />,
 				width: '100%',
 			},
 			{
 				title: 'Redux',
-				icon: <box-icon name='redux' type='logo' size='lg' color='#7248b6' />,
+				icon: <SiRedux size='48' color='#7248b6' />,
+				width: '100%',
+			},
+			{
+				title: 'Vue.Js',
+				icon: <FaVuejs size='48' color='#33475b' />,
+				width: '100%',
+			},
+			{
+				title: 'Mongoose',
+				icon: <SiMongodb size='48' color='#12964d' />,
+				width: '100%',
+			},
+			{
+				title: 'MySQL2 (NodeJs)',
+				icon: <SiMysql size='48' color='#005e86' />,
 				width: '100%',
 			},
 		],
@@ -69,12 +91,12 @@ export const SkillsData = [
 		data: [
 			{
 				title: 'Git',
-				icon: <box-icon name='git' type='logo' size='lg' color='#e94e31' />,
+				icon: <FaGitAlt size='48' color='#e94e31' />,
 				width: '100%',
 			},
 			{
 				title: 'Visual Studio Code',
-				icon: <box-icon name='visual-studio' type='logo' size='lg' color='#46a9f0' />,
+				icon: <SiVisualstudiocode size='48' color='#46a9f0' />,
 				width: '100%',
 			},
 			{
@@ -85,13 +107,18 @@ export const SkillsData = [
 				width: '100%',
 			},
 			{
-				title: 'HeidiSQL',
+				title: 'HeidiSQL (MySQL)',
 				icon: <img src={LogoHeidiSQL} alt='logo-heidisql' width='48px;' height='48px;' />,
 				width: '100%',
 			},
 			{
+				title: 'MongoDB Compass',
+				icon: <SiMongodb size='48' color='#12964d' />,
+				width: '100%',
+			},
+			{
 				title: 'NPM',
-				icon: <img src={LogoNPM} alt='logo-npm' width='48px;' height='48px;' />,
+				icon: <FaNpm size='48' color='#CD3738' />,
 				width: '100%',
 			},
 		],
