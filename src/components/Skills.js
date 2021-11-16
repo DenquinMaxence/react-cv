@@ -4,7 +4,7 @@ const Skills = () => {
 	return (
 		<>
 			<hr />
-			<div className='skills' id="skills">
+			<div className='skills' id='skills'>
 				<h4 className='skill-title'>Compétences</h4>
 				<div className='cards-block'>
 					{SkillsData.length > 0 &&
@@ -18,8 +18,10 @@ const Skills = () => {
 												<div className='card-img'>{item.icon}</div>
 												<div className='progressbar'>
 													<h5 className='card-title'>{item.title}</h5>
-													<div className='progressbar-block progressbar-moved'>
-														<div className='progressbar-set'></div>
+													<div
+														className='progressbar-block progressbar-moved'
+														>
+														<div className='progressbar-set' style={{width: item.width}}></div>
 													</div>
 												</div>
 											</div>
