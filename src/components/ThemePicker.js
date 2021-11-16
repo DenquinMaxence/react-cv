@@ -83,16 +83,12 @@ const ThemePicker = () => {
 					<>
 						<strong className='subtitle'>Type de thème</strong>
 						<div className='select-style'>
-							<select defaultValue={themeStyle}>
+							<select
+								defaultValue={themeStyle}
+								onChange={(e) => handleThemeStyle(e.target.value)}>
 								{ThemeData.style.length > 0 &&
 									ThemeData.style.map((style, index) => {
-										return (
-											<option
-												onClick={() => handleThemeStyle(style)}
-												key={index}>
-												{style}
-											</option>
-										);
+										return <option key={index}>{style}</option>;
 									})}
 							</select>
 						</div>
