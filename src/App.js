@@ -1,4 +1,3 @@
-import 'boxicons';
 import Routes from './components/Routes';
 
 function App() {

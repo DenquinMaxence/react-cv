@@ -75,7 +75,7 @@ const Home = () => {
 					<div id='about' className='about'>
 						<h3 className='about-title'>À propos</h3>
 						<p className='about-text'>
-							Passionné par le développement informatique des des années, mon ambition
+							Passionné par le développement informatique des années, mon ambition
 							serait que ma passion devienne mon métier. Évoluer au fil des
 							technologies en concrétisant les acquis tout en s'ouvrant sur les
 							nouveaux outils et pour moi la chose la plus passionnante et
