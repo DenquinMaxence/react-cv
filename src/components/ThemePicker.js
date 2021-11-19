@@ -47,9 +47,13 @@ const ThemePicker = () => {
 	useEffect(() => {
 		handleThemeColor(themeColor);
 
-		themeDark === 'true'
-			? document.documentElement.classList.add('theme-dark')
-			: document.documentElement.classList.remove('theme-dark');
+		if (themeDark === 'true') {
+			document.documentElement.classList.add('theme-dark');
+			document.querySelector('.fa-symfony').style.color = '#ffffff';
+		} else {
+			document.documentElement.classList.remove('theme-dark');
+			document.querySelector('.fa-symfony').style.color = '#000000';
+		}
 	}, [themeColor, themeDark]);
 
 	return (

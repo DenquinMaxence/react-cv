@@ -56,7 +56,7 @@ export const SkillsData = [
 		data: [
 			{
 				title: 'Symfony 4',
-				icon: <FaSymfony size='48' color='#000000' />,
+				icon: <FaSymfony className="fa-symfony" size='48' color='#000000' />,
 				width: '70%',
 			},
 			{
