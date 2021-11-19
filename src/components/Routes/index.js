@@ -7,8 +7,8 @@ const index = () => {
         <BrowserRouter>
             <ThemePicker />
             <Switch>
-                <Route path="/" exact component={Home} />
-                <Redirect to="/" />
+                <Route path="/react-cv/" exact component={Home} />
+                <Redirect to="/react-cv/" />
             </Switch>
         </BrowserRouter>
     );

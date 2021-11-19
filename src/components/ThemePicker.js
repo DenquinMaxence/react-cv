@@ -47,13 +47,18 @@ const ThemePicker = () => {
 	useEffect(() => {
 		handleThemeColor(themeColor);
 
-		if (themeDark === 'true') {
-			document.documentElement.classList.add('theme-dark');
-			document.querySelector('.fa-symfony').style.color = '#ffffff';
-		} else {
-			document.documentElement.classList.remove('theme-dark');
-			document.querySelector('.fa-symfony').style.color = '#000000';
-		}
+		const symfonySvg = document.querySelector('.fa-symfony') || null;
+
+		const symfonySvgColor = () => {
+			themeDark === 'true'
+				? (symfonySvg.style.color = '#ffffff')
+				: (symfonySvg.style.color = '#000000');
+		};
+		if (symfonySvg) symfonySvgColor();
+
+		themeDark === 'true'
+			? document.documentElement.classList.add('theme-dark')
+			: document.documentElement.classList.remove('theme-dark');
 	}, [themeColor, themeDark]);
 
 	return (
